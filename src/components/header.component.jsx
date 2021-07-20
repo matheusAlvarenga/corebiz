@@ -14,22 +14,27 @@ import {
     SearchInput,
 } from '../styles/components/header.styled';
 
+import LogoSvg from '../assets/logo-corebiz-preto-cinza.svg';
+import searchSvg from '../assets/search.svg';
+import userSvg from '../assets/user.svg';
+import cartSvg from '../assets/cart.svg';
+
 const Header = () => (
     <Container>
-        <Logo />
+        <Logo src={LogoSvg} />
         <SearchBar>
-            <SearchInput />
+            <SearchInput placeholder="O que está procurando?" />
             <SearchButton>
-                <SearchIcon />
+                <SearchIcon src={searchSvg} />
             </SearchButton>
         </SearchBar>
         <Menu>
             <MenuItem>
-                <MenuIcon />
+                <MenuIcon src={userSvg} />
                 <MenuLabel>Minha conta</MenuLabel>
             </MenuItem>
             <MenuItem>
-                <MenuIcon />
+                <MenuIcon src={cartSvg} />
                 <MenuCounter>1</MenuCounter>
             </MenuItem>
         </Menu>

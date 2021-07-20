@@ -9,6 +9,8 @@ const ResetCss = createGlobalStyle`
     }
     html {
         font-size: 62.5%;
+
+        background-color: aqua;
     }
     button {
         cursor: pointer;
