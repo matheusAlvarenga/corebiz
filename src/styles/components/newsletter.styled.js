@@ -54,6 +54,10 @@ export const Input = styled.input`
 
     font-family: 'Lato', sans-serif;
 
+    &:focus {
+        outline: none;
+    }
+
     &.error {
         border: 1px solid ${props => props.theme.error};
     }
