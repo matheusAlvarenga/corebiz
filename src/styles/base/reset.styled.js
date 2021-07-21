@@ -9,14 +9,23 @@ const ResetCss = createGlobalStyle`
     }
     html {
         font-size: 62.5%;
-
-        background-color: aqua;
     }
     button {
         cursor: pointer;
     }
-    .react-kanban-column {
-        padding: 0;
+
+    .slick-dots {
+        bottom: 2.4rem;
+
+        & > li > button::before {
+            font-size: 1rem;
+            color: ${props => props.theme.white};
+            opacity: 0.75;
+        }
+
+        & > li.slick-active > button::before {
+            color: ${props => props.theme.red};
+        }
     }
 `;
 
