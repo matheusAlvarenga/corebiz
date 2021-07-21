@@ -12,11 +12,29 @@ export const Container = styled.div`
     background-color: ${props => props.theme.black};
 
     color: ${props => props.theme.white};
+
+    @media (max-width: 1400px) {
+        padding: 2.4rem calc((100% - 90rem) / 2);
+    }
+
+    @media (max-width: 900px) {
+        height: auto;
+
+        flex-wrap: wrap;
+
+        gap: 2.4rem;
+
+        padding: 2.4rem 1.6rem;
+    }
 `;
 
 export const Location = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `;
 
 export const LocationTitle = styled.p`
@@ -32,6 +50,10 @@ export const LocationDivider = styled.div`
     border: 3px solid ${props => props.theme.white};
 
     margin-bottom: 1.6rem;
+
+    @media (max-width: 900px) {
+        width: 4rem;
+    }
 `;
 
 export const LocationLine = styled.p`
@@ -45,6 +67,12 @@ export const LocationLine = styled.p`
 export const Contact = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 900px) {
+        width: 100%;
+
+        align-items: center;
+    }
 `;
 
 export const ContactCard = styled.div`
@@ -84,6 +112,14 @@ export const Authors = styled.div`
     display: flex;
     align-items: center;
     gap: 3.2rem;
+
+    @media (max-width: 900px) {
+        width: 100%;
+
+        gap: 0;
+
+        justify-content: space-around;
+    }
 `;
 
 export const Author = styled.div`
