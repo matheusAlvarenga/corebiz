@@ -7,7 +7,6 @@ const Homepage = () => (
     <div>
         <h1>Home</h1>
         <Newsletter />
-        {localStorage.setItem('@corebiz/cart-items', 2)}
     </div>
 );
 
