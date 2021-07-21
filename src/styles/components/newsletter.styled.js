@@ -29,7 +29,14 @@ export const Form = styled.form`
 export const FormGroup = styled.div`
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 8px;
+`;
+
+export const InputCase = styled.div`
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 `;
 
@@ -46,6 +53,10 @@ export const Input = styled.input`
     color: ${props => props.theme.grey};
 
     font-family: 'Lato', sans-serif;
+
+    &.error {
+        border: 1px solid ${props => props.theme.error};
+    }
 `;
 
 export const Button = styled.button`
@@ -59,4 +70,10 @@ export const Button = styled.button`
     border: 0;
 
     font-family: 'Lato', sans-serif;
+`;
+
+export const ErrorLabel = styled.p`
+    font-size: 1.2rem;
+
+    color: ${props => props.theme.error};
 `;

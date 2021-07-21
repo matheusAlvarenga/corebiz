@@ -4,8 +4,10 @@ import {
     Container,
     Form,
     FormGroup,
+    InputCase,
     Input,
     Title,
+    ErrorLabel,
 } from '../styles/components/newsletter.styled';
 
 const Newsletter = () => (
@@ -13,8 +15,13 @@ const Newsletter = () => (
         <Title>Participe de nossas news com promoções e novidades!</Title>
         <Form>
             <FormGroup>
-                <Input placeholder="Digite seu nome" />
-                <Input placeholder="Digite seu email" />
+                <InputCase>
+                    <Input className="error" placeholder="Digite seu nome" />
+                    <ErrorLabel>Preencha com seu nome completo</ErrorLabel>
+                </InputCase>
+                <InputCase>
+                    <Input placeholder="Digite seu email" />
+                </InputCase>
                 <Button>Eu quero!</Button>
             </FormGroup>
         </Form>
