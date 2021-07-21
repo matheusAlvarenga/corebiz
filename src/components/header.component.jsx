@@ -27,6 +27,8 @@ const Header = () => {
         query: '(min-width: 900px)',
     });
 
+    const cartItems = localStorage.getItem('@corebiz/cart-items');
+
     return (
         <Container>
             {!mediaQuery && <Toggle src={menuSvg} />}
@@ -46,7 +48,7 @@ const Header = () => {
                 )}
                 <MenuItem>
                     <MenuIcon src={cartSvg} />
-                    <MenuCounter>1</MenuCounter>
+                    <MenuCounter>{cartItems}</MenuCounter>
                 </MenuItem>
             </Menu>
         </Container>
