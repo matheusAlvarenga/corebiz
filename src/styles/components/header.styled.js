@@ -11,16 +11,40 @@ export const Container = styled.div`
     align-items: center;
 
     background-color: ${props => props.theme.white};
+
+    @media (max-width: 1400px) {
+        padding: 0 calc((100% - 90rem) / 2);
+    }
+
+    @media (max-width: 900px) {
+        height: auto;
+
+        flex-wrap: wrap;
+
+        padding: 1.2rem 2rem;
+    }
 `;
 
 export const Logo = styled.img`
     height: 50%;
+
+    @media (max-width: 900px) {
+        max-height: 2.5rem;
+    }
 `;
 
 export const SearchBar = styled.div`
     width: 40vw;
 
     position: relative;
+
+    @media (max-width: 900px) {
+        width: 100%;
+
+        order: 15;
+
+        margin-top: 8px;
+    }
 `;
 
 export const SearchInput = styled.input`
@@ -89,3 +113,5 @@ export const MenuCounter = styled.div`
     background-color: ${props => props.theme.red};
     color: ${props => props.theme.white};
 `;
+
+export const Toggle = styled.img``;
