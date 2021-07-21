@@ -12,6 +12,12 @@ export const Container = styled.div`
     padding: 3.2rem calc((100% - 80rem) / 2);
 
     background-color: ${props => props.theme.greyBackground};
+
+    @media (max-width: 900px) {
+        height: auto;
+
+        padding: 2.4rem 1.6rem;
+    }
 `;
 
 export const Title = styled.p`
@@ -30,6 +36,9 @@ export const FormGroup = styled.div`
     display: flex;
     justify-content: center;
     gap: 8px;
+    @media (max-width: 900px) {
+        flex-wrap: wrap;
+    }
 `;
 
 export const InputCase = styled.div`
@@ -38,6 +47,10 @@ export const InputCase = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `;
 
 export const Input = styled.input`
@@ -74,6 +87,10 @@ export const Button = styled.button`
     border: 0;
 
     font-family: 'Lato', sans-serif;
+
+    @media (max-width: 900px) {
+        max-width: unset;
+    }
 `;
 
 export const ErrorLabel = styled.p`
