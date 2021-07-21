@@ -14,7 +14,7 @@ import {
     AuthorImg,
     AuthorLabel,
     Authors,
-} from '../styles/components/footer.styled';
+} from '../styles/layout/footer.styled';
 
 import mailSvg from '../assets/mail.svg';
 import phoneSvg from '../assets/phone.svg';

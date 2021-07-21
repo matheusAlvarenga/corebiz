@@ -14,7 +14,7 @@ import {
     SearchIcon,
     SearchInput,
     Toggle,
-} from '../styles/components/header.styled';
+} from '../styles/layout/header.styled';
 
 import LogoSvg from '../assets/logo-corebiz-preto-cinza.svg';
 import searchSvg from '../assets/search.svg';
