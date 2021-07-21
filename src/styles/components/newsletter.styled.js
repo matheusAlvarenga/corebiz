@@ -81,3 +81,31 @@ export const ErrorLabel = styled.p`
 
     color: ${props => props.theme.error};
 `;
+
+export const MessageTitle = styled.p`
+    font-family: 'Lato', sans-serif;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+`;
+
+export const MessageLine = styled.p`
+    font-family: 'Lato', sans-serif;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    text-align: center;
+`;
+
+export const MessageButton = styled.button`
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+
+    padding: 1.6rem 5.4rem;
+    border-radius: 5px;
+    border: 0;
+
+    background-color: ${props => props.theme.black};
+    color: ${props => props.theme.white};
+`;
