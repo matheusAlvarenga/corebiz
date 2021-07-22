@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.js": "/corebiz/static/js/main.b5eab7f7.chunk.js",
+    "main.js.map": "/corebiz/static/js/main.b5eab7f7.chunk.js.map",
+    "runtime-main.js": "/corebiz/static/js/runtime-main.a469da80.js",
+    "runtime-main.js.map": "/corebiz/static/js/runtime-main.a469da80.js.map",
+    "static/css/2.904a550a.chunk.css": "/corebiz/static/css/2.904a550a.chunk.css",
+    "static/js/2.3c5ecd85.chunk.js": "/corebiz/static/js/2.3c5ecd85.chunk.js",
+    "static/js/2.3c5ecd85.chunk.js.map": "/corebiz/static/js/2.3c5ecd85.chunk.js.map",
+    "index.html": "/corebiz/index.html",
+    "static/css/2.904a550a.chunk.css.map": "/corebiz/static/css/2.904a550a.chunk.css.map",
+    "static/js/2.3c5ecd85.chunk.js.LICENSE.txt": "/corebiz/static/js/2.3c5ecd85.chunk.js.LICENSE.txt",
+    "static/media/banner.9a0ce688.jpg": "/corebiz/static/media/banner.9a0ce688.jpg",
+    "static/media/cart.e1840e0b.svg": "/corebiz/static/media/cart.e1840e0b.svg",
+    "static/media/logo-corebiz-branco-cinza.a31a2875.svg": "/corebiz/static/media/logo-corebiz-branco-cinza.a31a2875.svg",
+    "static/media/logo-corebiz-preto-cinza.6ef2abf3.svg": "/corebiz/static/media/logo-corebiz-preto-cinza.6ef2abf3.svg",
+    "static/media/logo-vetex.2fbcbc49.svg": "/corebiz/static/media/logo-vetex.2fbcbc49.svg",
+    "static/media/mail.8698fe83.svg": "/corebiz/static/media/mail.8698fe83.svg",
+    "static/media/menu.644fa295.svg": "/corebiz/static/media/menu.644fa295.svg",
+    "static/media/next.3140d69b.svg": "/corebiz/static/media/next.3140d69b.svg",
+    "static/media/phone.fb9ed5db.svg": "/corebiz/static/media/phone.fb9ed5db.svg",
+    "static/media/prev.64dad8fb.svg": "/corebiz/static/media/prev.64dad8fb.svg",
+    "static/media/search.b4262fb1.svg": "/corebiz/static/media/search.b4262fb1.svg",
+    "static/media/slick-theme.css": "/corebiz/static/media/slick.c94f7671.ttf",
+    "static/media/star.570adeee.svg": "/corebiz/static/media/star.570adeee.svg",
+    "static/media/star_border.a0301fad.svg": "/corebiz/static/media/star_border.a0301fad.svg",
+    "static/media/user.e8de1442.svg": "/corebiz/static/media/user.e8de1442.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a469da80.js",
+    "static/css/2.904a550a.chunk.css",
+    "static/js/2.3c5ecd85.chunk.js",
+    "static/js/main.b5eab7f7.chunk.js"
+  ]
+}
