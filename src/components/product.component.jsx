@@ -9,26 +9,44 @@ import {
     ListPrice,
     Price,
     Title,
+    OFFCard,
+    OFFCardText,
 } from '../styles/components/product.styled';
 import Installments from './installments.component';
 import Stars from './stars.component';
 
-const Product = ({ data }) => (
-    <Container>
-        <Image />
-        <Description>
-            <Title>{data.productName}</Title>
-            <Stars count={data.stars} />
+const Product = ({ data }) => {
+    function addToCart() {
+        localStorage.setItem(
+            '@corebiz/cart-items',
+            parseInt(localStorage.getItem('@corebiz/cart-items'), 10) + 1
+        );
+    }
+
+    return (
+        <Container>
             {data.listPrice !== null && (
-                <ListPrice>de R${(data.listPrice / 100).toFixed(2)}</ListPrice>
+                <OFFCard>
+                    <OFFCardText>OFF</OFFCardText>
+                </OFFCard>
             )}
-            <Price>por R${(data.price / 100).toFixed(2)}</Price>
-            {data.installments.length !== 0 && (
-                <Installments data={data.installments} />
-            )}
-            <Button>Comprar</Button>
-        </Description>
-    </Container>
-);
+            <Image src={data.imageUrl} />
+            <Description className="desc">
+                <Title>{data.productName}</Title>
+                <Stars count={data.stars} />
+                {data.listPrice !== null && (
+                    <ListPrice>
+                        de R${(data.listPrice / 100).toFixed(2)}
+                    </ListPrice>
+                )}
+                <Price>por R${(data.price / 100).toFixed(2)}</Price>
+                {data.installments.length !== 0 && (
+                    <Installments data={data.installments} />
+                )}
+                <Button onClick={() => addToCart()}>Comprar</Button>
+            </Description>
+        </Container>
+    );
+};
 
 export default Product;

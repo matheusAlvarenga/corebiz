@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -23,11 +23,11 @@ import cartSvg from '../assets/cart.svg';
 import menuSvg from '../assets/menu.svg';
 
 const Header = () => {
+    const [cart] = useState(localStorage.getItem('@corebiz/cart-items'));
+
     const mediaQuery = useMediaQuery({
         query: '(min-width: 900px)',
     });
-
-    const cartItems = localStorage.getItem('@corebiz/cart-items');
 
     return (
         <Container>
@@ -48,7 +48,7 @@ const Header = () => {
                 )}
                 <MenuItem>
                     <MenuIcon src={cartSvg} />
-                    <MenuCounter>{cartItems}</MenuCounter>
+                    <MenuCounter>{cart}</MenuCounter>
                 </MenuItem>
             </Menu>
         </Container>

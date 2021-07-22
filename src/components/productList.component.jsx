@@ -9,13 +9,16 @@ import {
 } from '../styles/components/productList.styled';
 import Product from './product.component';
 
+import prev from '../assets/prev.svg';
+import next from '../assets/next.svg';
+
 const ProductList = () => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(undefined);
 
     const settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
@@ -38,6 +41,8 @@ const ProductList = () => {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     initialSlide: 2,
+                    infinite: true,
+                    dots: true,
                 },
             },
         ],
@@ -68,7 +73,11 @@ const ProductList = () => {
         <Container>
             <Title>Mais Vendidos</Title>
             <Divider />
-            <Slider {...settings}>
+            <Slider
+                prevArrow={<img src={prev} alt="Back" />}
+                nextArrow={<img src={next} alt="Next" />}
+                {...settings}
+            >
                 {products.map(product => (
                     <Product key={product.productId} data={product} />
                 ))}

@@ -7,6 +7,7 @@ const mainTheme = {
     greyDark: '#333333',
     greyBottom: '#C0C0C0',
     greyBackground: '#F2F2F2',
+    greyHover: '#E6E8EA',
 };
 
 export default mainTheme;

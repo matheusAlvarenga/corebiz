@@ -7,6 +7,10 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
+
+    & .slick-dots {
+        bottom: -2.4rem;
+    }
 `;
 
 export const Title = styled.div`

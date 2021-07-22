@@ -22,7 +22,7 @@ const ResetCss = createGlobalStyle`
 
         & > li > button::before {
             font-size: 1rem;
-            color: ${props => props.theme.white};
+            color: ${props => props.theme.greyBottom};
             opacity: 0.75;
         }
 
