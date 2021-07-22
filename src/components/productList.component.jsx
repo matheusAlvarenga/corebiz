@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import { getProducts } from '../hooks/products.hooks';
 import {
     Container,
     Divider,
@@ -9,10 +10,13 @@ import {
 import Product from './product.component';
 
 const ProductList = () => {
+    const [products, setProducts] = useState([]);
+    const [error, setError] = useState(undefined);
+
     const settings = {
         dots: false,
         infinite: false,
-        speed: 3000,
+        speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
@@ -25,6 +29,7 @@ const ProductList = () => {
                     slidesToScroll: 3,
                     infinite: true,
                     dots: true,
+                    arrows: false,
                 },
             },
             {
@@ -38,18 +43,35 @@ const ProductList = () => {
         ],
     };
 
+    useEffect(async () => {
+        const response = await getProducts();
+
+        switch (response.status) {
+            case 200:
+                setProducts(response.data);
+                break;
+
+            default:
+                setError(response.data);
+        }
+    }, []);
+
+    if (!products) {
+        return <h1>Carregando</h1>;
+    }
+
+    if (error) {
+        return <h1>{error}</h1>;
+    }
+
     return (
         <Container>
             <Title>Mais Vendidos</Title>
             <Divider />
             <Slider {...settings}>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
+                {products.map(product => (
+                    <Product data={product} />
+                ))}
             </Slider>
         </Container>
     );
