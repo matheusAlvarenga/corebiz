@@ -19,6 +19,11 @@ export const Slide = styled.div`
     padding: 0 calc((100% - 130rem) / 2);
 
     color: ${props => props.theme.white};
+
+    @media (max-width: 900px) {
+        background-position: 75%;
+        filter: brightness(0.75);
+    }
 `;
 
 export const SubTitle = styled.p`
@@ -29,6 +34,10 @@ export const SubTitle = styled.p`
     line-height: 4rem;
 
     margin-bottom: 1.6rem;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `;
 
 export const Title = styled.p`
@@ -37,4 +46,8 @@ export const Title = styled.p`
     font-size: 4.5rem;
     font-weight: 900;
     line-height: 4.5rem;
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
 `;
