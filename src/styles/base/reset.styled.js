@@ -8,7 +8,10 @@ const ResetCss = createGlobalStyle`
         font-family: 'Nunito', sans-serif;
     }
     html {
-        font-size: 62.5%;
+        font-size: 62.5%;   
+    }
+    html, body {
+        overflow-x: hidden;
     }
     button {
         cursor: pointer;

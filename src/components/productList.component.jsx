@@ -70,7 +70,7 @@ const ProductList = () => {
             <Divider />
             <Slider {...settings}>
                 {products.map(product => (
-                    <Product data={product} />
+                    <Product key={product.productId} data={product} />
                 ))}
             </Slider>
         </Container>
