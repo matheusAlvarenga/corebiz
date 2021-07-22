@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useStoreState } from 'easy-peasy';
 
 import {
     Container,
@@ -23,7 +24,7 @@ import cartSvg from '../assets/cart.svg';
 import menuSvg from '../assets/menu.svg';
 
 const Header = () => {
-    const [cart] = useState(localStorage.getItem('@corebiz/cart-items'));
+    const cart = useStoreState(state => state.cart);
 
     const mediaQuery = useMediaQuery({
         query: '(min-width: 900px)',
@@ -48,7 +49,7 @@ const Header = () => {
                 )}
                 <MenuItem>
                     <MenuIcon src={cartSvg} />
-                    <MenuCounter>{cart}</MenuCounter>
+                    <MenuCounter>{cart.length}</MenuCounter>
                 </MenuItem>
             </Menu>
         </Container>

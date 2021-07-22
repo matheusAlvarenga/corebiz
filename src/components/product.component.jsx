@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import { useStoreActions } from 'easy-peasy';
+
 import {
     Button,
     Container,
@@ -16,12 +18,7 @@ import Installments from './installments.component';
 import Stars from './stars.component';
 
 const Product = ({ data }) => {
-    function addToCart() {
-        localStorage.setItem(
-            '@corebiz/cart-items',
-            parseInt(localStorage.getItem('@corebiz/cart-items'), 10) + 1
-        );
-    }
+    const addToCart = useStoreActions(actions => actions.addToCart);
 
     return (
         <Container>
